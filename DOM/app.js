@@ -20,6 +20,19 @@ div.addEventListener("mouseenter", function( event ) {
 div.addEventListener("mouseleave", function( event ) {
     event.target.style.backgroundColor = "white";
 });
+
+let p = document.createElement('p');
+let pText = document.createTextNode('Hello this is a paragraph can you read it or not');
+p.appendChild(pText);
+document.body.appendChild(p);
+
+var colors = [
+    "rgb(255, 0, 0)", "rgb(0, 0, 255)", "rgb(0, 225, 0)"
+];
+
+p.addEventListener('click', function(){
+    for (i=0; i<colors.length; i++) {p.style.color = colors[i]}
+});
      
     button2.addEventListener('click', function (){
         //let h1 = document.createElement('h1');
